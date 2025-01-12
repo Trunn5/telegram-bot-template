@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create Handler",
+            "type": "shell",
+            "command": "poetry run python scripts/create_handler.py ${input:handlerType} ${input:folderPath} ${input:filename}",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "handlerType",
+            "type": "pickString",
+            "description": "Select the handler type",
+            "options": ["message", "callback_query"]
+        },
+        {
+            "id": "folderPath",
+            "type": "promptString",
+            "description": "Enter the folder path"
+        },
+        {
+            "id": "filename",
+            "type": "promptString",
+            "description": "Enter the filename"
+        }
+    ]
+}
