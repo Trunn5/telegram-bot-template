@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "telegram-bot-template"
+version = "0.1.0"
+description = "AIgrom based template for telegram bots"
+authors = ["Dmitrii Prosvirkin"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiogram = "^3.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
