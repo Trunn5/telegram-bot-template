@@ -26,12 +26,12 @@ def create_handler(handler_type, folder_path, filename):
     # Determine event type
     event_type = {
         "message": "Message",
-        "callback": "CallbackQuery",
+        "callback_query": "CallbackQuery",
     }.get(handler_type.lower())
 
     event_arg = {
         "message": "m",
-        "callback": "c",
+        "callback_query": "c",
     }.get(handler_type.lower())
 
     if not event_type or not event_arg:
