@@ -3,8 +3,9 @@ import sys
 from pathlib import Path
 
 TEMPLATE = """from aiogram import types
+from aiogram.fsm.context import FSMContext
 
-async def {handler_name}({event_arg}: types.{event_type}):
+async def {handler_name}({event_arg}: types.{event_type}, state: FSMContext):
     \"\"\"Handle {event_type}\"\"\"
     # Your logic here
     pass
