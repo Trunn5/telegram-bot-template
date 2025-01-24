@@ -1,6 +1,5 @@
-import os
-import sys
 from pathlib import Path
+import sys
 
 TEMPLATE = """from aiogram import types
 from aiogram.fsm.context import FSMContext
@@ -28,6 +27,8 @@ def create_handler(handler_type, folder_path, filename):
         "message": "Message",
         "callback_query": "CallbackQuery",
     }.get(handler_type.lower())
+
+    
 
     event_arg = {
         "message": "m",
